@@ -30,7 +30,7 @@ At first your **logger** will be sPacakge "log"imple. But we will keep adding to
 
 ## Table of Contents
 
-1. Simple Logger
+1. [Simple Logger](chapters/simple_logger/README.md)
 2. Hello {NAME}
 3. Repository "go-log"
 4. Pacakge "log"
