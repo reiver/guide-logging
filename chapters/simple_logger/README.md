@@ -4,35 +4,45 @@ by [Charles Iliya Krempeaux](http://changelog.ca/)
 
 ---
 
-Let's start by **№1** creating a **simple logger**, and then **№2** creating a (very simple) program that uses that logger.
+With the help of this **guide**, you are going to create a logger.
 
-The program you will create (that uses that **logger** you created) will log the following:—
+At first your **logger** will be simple. But we will keep adding to it until it is powerful & sophisticated.
+
+
+
+Let's start by **№1** creating a **simple logger**, and then **№2** creating a (very simple) program that uses that (very simple) **logger** (you will create).
+
+The program you will create (that uses the **logger** that you will create) will **log** the following:—
 
 At the beginning of the program it will **log**:
-> BEGIN
+> `BEGIN`
 
 In the middle of the program it will **log**:
-> I said: Hello world!
+> `I said: Hello world!`
 
 And at the end of the program it will **log**:
-> END
+> `END`
 
 And it will look something like:
 ```go
 package main
 
+//@TODO: import your logger here
+
 func main() {
-	log.Begin()
+	var logger log.Logger
+
+	logger.Begin()
     
 	var msg string = "Hello world!"
 	fmt.Println(msg)
-	log.Log("I said:", msg)
+	logger.Log("I said:", msg)
     
-	log.End()
+	logger.End()
 }
 ```
 
-(**Notice that there is a `fmt.Println()` that outputs `Hello world!`, and there is also a `log.Log()` that outputs `I said: Hello world!`.**)
+(**Notice that there is a `fmt.Println()` that outputs `Hello world!`, and there is also a `logger.Log()` that outputs `I said: Hello world!`.**)
 
 The **logger** you create will be represented by Go a type:
 ```go
@@ -64,22 +74,9 @@ func (receiver Logger) End() {
     //@TODO: you will need to figure out what goes here.
 }
 ```
+## Logger Code
 
-These other two methods should use the `.Log()` method (you created before) to do their outputting.
-
-## Hints
-
-Here are some references that can help you with your task in this chapter.
-
-* [fmt.Fprintln()](https://golang.org/pkg/fmt/#Fprintln) — `fmt.Fprintln()` is similar to `fmt.Println()` except `fmt.Fprintln()` lets you tell it where to send the output.
-* [os.Stdout](https://golang.org/pkg/os/#Stdout) — `os.Stdout` is where `fmt.Printf()` & `fmt.Println()` send their output.
-* [ioutil.Discard](https://golang.org/pkg/io/ioutil/#Discard)
-* [io.Writer](https://golang.org/pkg/io/#Writer)
-* [Quick-and-Dirty Debugging in Golang](https://changelog.ca/log/2015/03/09/golang)
-
-## Code
-
-So your source code will look like something like the following:
+So, to summarize, your **logger** source code will look like something like the following:
 ```go
 package log
 
@@ -100,4 +97,14 @@ func (receiver Logger) Log(a ...interface{}) {
 }
 ```
 
-But where you replace all the `@TODO` with actual working code, that does what was asked for.
+You will replace all the `@TODO` with actual working code, that does what was asked for.
+
+## Hints
+
+Here are some references that can help you with your task in this chapter.
+
+* [fmt.Fprintln()](https://golang.org/pkg/fmt/#Fprintln) — `fmt.Fprintln()` is similar to `fmt.Println()` except `fmt.Fprintln()` lets you tell it where to send the output.
+* [os.Stdout](https://golang.org/pkg/os/#Stdout) — `os.Stdout` is where `fmt.Printf()` & `fmt.Println()` send their output.
+* [ioutil.Discard](https://golang.org/pkg/io/ioutil/#Discard)
+* [io.Writer](https://golang.org/pkg/io/#Writer)
+* [Quick-and-Dirty Debugging in Golang](https://changelog.ca/log/2015/03/09/golang)
