@@ -41,10 +41,11 @@ At first your **logger** will be sPacakge "log"imple. But we will keep adding to
 9. Begin Prefix
 10. Func Name
 11. Timer
-12. Leveled Logger
-13. Leveled Logger Unit Tests
-14. Leveled Logger Demonstration
-15. Logger Verbosity
-16. License
-17. README.md
-18. Documentation
+12. Tracing
+13. Leveled Logger
+14. Leveled Logger Unit Tests
+15. Leveled Logger Demonstration
+16. Logger Verbosity
+17. License
+18. README.md
+19. Documentation
