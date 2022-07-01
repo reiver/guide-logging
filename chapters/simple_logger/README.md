@@ -53,7 +53,7 @@ type Logger struct {
 
 This **logger** will provide methods to output text BUT **you will write it in a way that you have the ability to turn on and off the outputted text, and decide _where_ you want the output to go (such a `os.Stdout`, or a file, or a memory buffer, etc)**.
 
-The first method your logger will have is:
+The first method your **logger** will have is:
 ```go
 func (receiver Logger) Log(a ...interface{}) {
     //@TODO: you will need to figure out what goes here.
@@ -109,6 +109,6 @@ Here are some references that can help you with your task in this chapter.
 
 ## Check-List
 
-* [ ] Did you create a logger as with the types and methods, as described earlier?
-* [ ] Is there a way of changing where your logger sends the logs?
-* [ ] Did you create a program that uses your logger, as described earlier?
+* [ ] Did you create a **logger** as with the types and methods, as described earlier?
+* [ ] Is there a way of changing where your **logger** sends the **logs**?
+* [ ] Did you create a program that uses your **logger**, as described earlier?
