@@ -31,21 +31,21 @@ At first your **logger** will be simple. But we will keep adding to it until it 
 ## Table of Contents
 
 1. [Simple Logger](chapters/simple_logger/README.md)
-5. Formatted Logger
-8. Repository "go-log"
-9. Pacakge "log"
-10. Unit Tests
-11. import "go-log"
-12. Verbose
-13. Prefix
-14. Begin Prefix
-15. Func Name
-16. Timer
-17. Tracing
-18. Leveled Logger
-19. Leveled Logger Unit Tests
-20. Leveled Logger Demonstration
-21. Logger Verbosity
-22. License
-23. README.md
-24. Documentation
+2. Formatted Logger
+3. Repository "go-log"
+4. Pacakge "log"
+5. Unit Tests
+6. import "go-log"
+7. Verbose
+8. Prefix
+9. Begin Prefix
+10. Func Name
+11. Timer
+12. Tracing
+13. Leveled Logger
+14. Leveled Logger Unit Tests
+15. Leveled Logger Demonstration
+16. Logger Verbosity
+17. License
+18. README.md
+19. Documentation
