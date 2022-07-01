@@ -8,8 +8,6 @@ With the help of this **guide**, you are going to create a logger.
 
 At first your **logger** will be simple. But we will keep adding to it until it is powerful & sophisticated.
 
-
-
 Let's start by **№1** creating a **simple logger**, and then **№2** creating a (very simple) program that uses that (very simple) **logger** (you will create).
 
 The program you will create (that uses the **logger** that you will create) will **log** the following:—
@@ -108,3 +106,9 @@ Here are some references that can help you with your task in this chapter.
 * [ioutil.Discard](https://golang.org/pkg/io/ioutil/#Discard)
 * [io.Writer](https://golang.org/pkg/io/#Writer)
 * [Quick-and-Dirty Debugging in Golang](https://changelog.ca/log/2015/03/09/golang)
+
+## Check-List
+
+* [ ] Did you create a logger as with the types and methods, as described earlier?
+* [ ] Is there a way of changing where your logger sends the logs?
+* [ ] Did you create a program that uses your logger, as described earlier?
