@@ -76,3 +76,28 @@ Here are some references that can help you with your task in this chapter.
 * [ioutil.Discard](https://golang.org/pkg/io/ioutil/#Discard)
 * [io.Writer](https://golang.org/pkg/io/#Writer)
 * [Quick-and-Dirty Debugging in Golang](https://changelog.ca/log/2015/03/09/golang)
+
+## Code
+
+So your source code will look like something like the following:
+```go
+package log
+
+type Logger struct {
+    //@TODO: you will need to figure out what goes here.
+}
+
+func (receiver Logger) Begin() {
+    //@TODO: you will need to figure out what goes here.
+}
+
+func (receiver Logger) End() {
+    //@TODO: you will need to figure out what goes here.
+}
+
+func (receiver Logger) Log(a ...interface{}) {
+    //@TODO: you will need to figure out what goes here.
+}
+```
+
+But where you replace all the `@TODO` with actual working code, that does what was asked for.
