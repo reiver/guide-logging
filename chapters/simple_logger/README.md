@@ -12,7 +12,7 @@ At the beginning of the program it will **log**:
 > BEGIN
 
 In the middle of the program it will **log**:
-> I said "Hello world!"
+> I said: Hello world!
 
 And at the end of the program it will **log**:
 > END
