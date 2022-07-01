@@ -26,7 +26,7 @@ Typically the programmer is reading the **logs**, not the end user. I.e., the **
 
 (**Logs** can also be read by software programs for monitoring, to detect hack attempts, to detect imminent hardware failure, etc.)
 
-At first your **logger** will be sPacakge "log"imple. But we will keep adding to it until it is quite powerful & sophisticated.
+At first your **logger** will be simple. But we will keep adding to it until it is powerful & sophisticated.
 
 ## Table of Contents
 
