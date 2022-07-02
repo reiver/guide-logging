@@ -136,5 +136,10 @@ func (receiver Logger) Logf(format string, a ...interface{}) {
 
 Here are some references that can help you with your task in this chapter.
 
+* [fmt.Sprintf()](https://golang.org/pkg/fmt/#Sprintf)
 
-* [fmt.Fprintf()](https://golang.org/pkg/fmt/#Fprintf)
+## Check-List
+
+* [ ] Did you add to your **logger** where you created that new method, as described earlier?
+* [ ] Does your new `logger.Logf()` method output using your `logger.Log()` method?
+* [ ] Does your new `logger.Logf()` method support all the same _verbs_ as [fmt.Fprintf()](https://golang.org/pkg/fmt/#Fprintf), [fmt.Printf()](https://golang.org/pkg/fmt/#Printf), and [fmt.Sprintf()](https://golang.org/pkg/fmt/#Sprintf)?
