@@ -92,6 +92,7 @@ This is regular output:
 And this is a **log** created by calling `logger.End()`:
 > `END`
 
+## New Logger Method
 
 To accomplish this you should add another method to your **logger**:
 ```
@@ -104,6 +105,8 @@ Such that when you **log** the name you do a:
 ```
 log.Logf("The name was %q", name)
 ```
+
+Also, you are going make it so your new `logger.Logf()` method outputs by calling your `logger.Log()` method.
 
 ## Logger Code
 
