@@ -132,5 +132,9 @@ func (receiver Logger) Logf(format string, a ...interface{}) {
 }
 ```
 
-Hints:
+## Hints
+
+Here are some references that can help you with your task in this chapter.
+
+
 * [fmt.Fprintf()](https://golang.org/pkg/fmt/#Fprintf)
