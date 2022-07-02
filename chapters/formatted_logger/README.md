@@ -105,5 +105,32 @@ Such that when you **log** the name you do a:
 log.Logf("The name was %q", name)
 ```
 
+## Logger Code
+
+So, your logger code is now going to look like this:
+```go
+package log
+
+type Logger struct {
+    // you already implemented this in the previous chapter.
+}
+
+func (receiver Logger) Begin() {
+    // you already implemented this in the previous chapter.
+}
+
+func (receiver Logger) End() {
+    // you already implemented this in the previous chapter.
+}
+
+func (receiver Logger) Log(a ...interface{}) {
+    // you already implemented this in the previous chapter.
+}
+
+func (receiver Logger) Log(a ...interface{}) {
+    //@TODO: you will need to figure out what goes here.
+}
+```
+
 Hints:
 * [fmt.Fprintf()](https://golang.org/pkg/fmt/#Fprintf)
