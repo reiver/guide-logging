@@ -31,6 +31,8 @@ I.e., the **logs** are there to help **you** (the programmer)!
 
 At first your **logger** will be simple. But we will keep adding to it until it is powerful & sophisticated.
 
+Let's get started!
+
 ## Table of Contents
 
 1. [Simple Logger](chapters/simple_logger/README.md)
