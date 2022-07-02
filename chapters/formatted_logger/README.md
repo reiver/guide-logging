@@ -127,7 +127,7 @@ func (receiver Logger) Log(a ...interface{}) {
     // you already implemented this in the previous chapter.
 }
 
-func (receiver Logger) Log(a ...interface{}) {
+func (receiver Logger) Logf(format string, a ...interface{}) {
     //@TODO: you will need to figure out what goes here.
 }
 ```
