@@ -32,7 +32,7 @@ At first your **logger** will be simple. But we will keep adding to it until it 
 
 1. [Simple Logger](chapters/simple_logger/README.md)
 2. [Formatted Logger](chapters/formatted_logger/README.md)
-3. Repository "go-log"
+3. [Repository "go-log"](chapters/repository_go-log/README.md)
 4. Pacakge "log"
 5. Unit Tests
 6. import "go-log"
