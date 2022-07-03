@@ -290,3 +290,27 @@ fmt.Fprintf(out, "x = %v", x)
 (In the code here, the `logMode` variable is _stringly typed_.
 Here it is done for clarity.
 In your actual code it would be better to use const values.)
+
+## Going Beyond fmt.Fprintf() Style Debugging
+
+You can also go beyond using `fmt.Fprintf()` too.
+
+**You can use a logger.**
+
+Actually, **you can make a logger** (and then use the one you made).
+
+So, instead of having to do:
+```go
+fmt.Fprintf(out, "x = %v", x)
+```
+
+You would instead do:
+```go
+logger.Log("X = %v", x)
+```
+
+That way you don't have to bother with always using that `out` variable.
+
+This **guide** guides you through the process of creating your own **logger**.
+
+Let get started!
