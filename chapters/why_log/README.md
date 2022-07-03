@@ -79,7 +79,7 @@ fmt.Printf("The type of cherry is: %T \n", cherry)
 // The type of cherry is: float64
 ```
 
-```
+```go
 type Fruit struct {
         Name string
 }
@@ -94,7 +94,7 @@ fmt.Printf("The type of x is: %T \n", x)
 // The type of x is: main.Fruit
 ```
 
-```
+```go
 grape      := false
 watermelon := struct{ hasSeeds bool }{ hasSeeds: false }
 
@@ -106,3 +106,130 @@ fmt.Printf("The type of watermelon is: %T \n", watermelon)
 // The type of watermelon is: struct { hasSeeds bool }
 ```
 
+### Printing the Value of a Variable
+
+Sometimes you want to know the value of a variable.
+
+Is it an `5`?
+Is it a `"all your base are belong to us"`?
+Is it a `false`?
+Is it a `struct{}{}`?
+Etc?
+
+This is how you check that:
+
+```go
+fmt.Printf("myVariable = %#v \n", myVariable)
+```
+
+Let's see some specific examples using that:
+
+
+```go
+apple  := 14
+banana := "what is this"
+cherry := 0.2
+
+fmt.Printf("apple  = %#v \n", apple)
+fmt.Printf("banana = %#v \n", banana)
+fmt.Printf("cherry = %#v \n", cherry)
+
+// Output:
+// apple  = 14 
+// banana = "what is this" 
+// cherry = 0.2 
+```
+
+```go
+type Fruit struct {
+        Name string
+}
+
+x := Fruit{
+        Name: "blackberry",
+}
+
+fmt.Printf("x = %#v \n", x)
+
+// Output:
+// x = main.Fruit{Name:"blackberry"}
+```
+
+```go
+grape      := false
+watermelon := struct{ hasSeeds bool }{ hasSeeds: false }
+
+fmt.Printf("grape      = %#v \n", grape)
+fmt.Printf("watermelon = %#v \n", watermelon)
+
+// Output:
+// grape      = false 
+// watermelon = struct { hasSeeds bool }{hasSeeds:false}
+```
+
+### Fancier Printing
+
+There are fancier ways of printing in Go.
+The Go fmt documentation provides the full information on it.
+But here's an excerpt:
+
+> General:
+> 
+> ```
+> %v     the value in a default format
+>        when printing structs, the plus flag (%+v) adds field names
+> %#v    a Go-syntax representation of the value
+> %T     a Go-syntax representation of the type of the value
+> %%     a literal percent sign; consumes no value
+> ```
+> 
+> Boolean:
+> 
+> ```
+> %t     the word true or false
+> ```
+> 
+> Integer:
+> 
+> ```
+> %b     base 2
+> %c     the character represented by the corresponding Unicode code point
+> %d     base 10
+> %o     base 8
+> %q     a single-quoted character literal safely escaped with Go syntax.
+> %x     base 16, with lower-case letters for a-f
+> %X     base 16, with upper-case letters for A-F
+> %U     Unicode format: U+1234; same as "U+%04X"
+> ```
+> 
+> Floating-point and complex constituents:
+> 
+> ```
+> %b     decimalless scientific notation with exponent a power of two,
+>        in the manner of strconv.FormatFloat with the 'b' format,
+>        e.g. -123456p-78
+> %e     scientific notation, e.g. -1234.456e+78
+> %E     scientific notation, e.g. -1234.456E+78
+> %f     decimal point but no exponent, e.g. 123.456
+> %F     synonym for %f
+> %g     %e for large exponents, %f otherwise
+> %G     %E for large exponents, %F otherwise
+> ```
+> 
+> String and slice of bytes:
+> 
+> ```
+> %s     the uninterpreted bytes of the string or slice
+> %q     a double-quoted string safely escaped with Go syntax
+> %x     base 16, lower-case, two characters per byte
+> %X     base 16, upper-case, two characters per byte
+> ```
+> 
+> Pointer:
+> 
+> ```
+> %p     base 16 notation, with leading 0x
+> ```
+
+There is a lot more.
+Check out the [Golang fmt documentation](http://golang.org/pkg/fmt/) for more information on it.
