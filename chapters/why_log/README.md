@@ -11,7 +11,7 @@ The smallest piece of code that you can create before you can do a useful test, 
 
 Maybe that means you were writing a function.
 Maybe that means you created a new struct with some methods.
-Or even, maybe that means you finally got around to implementing that code in that place where you previously left the "//@TODO" comment.
+Or even, maybe that means you finally got around to implementing that code in that place where you previously left the "`//@TODO`" comment.
 
 Now it is time to make sure what you just wrote actually works.
 So you run it.
@@ -233,3 +233,60 @@ But here's an excerpt:
 
 There is a lot more.
 Check out the [Golang fmt documentation](http://golang.org/pkg/fmt/) for more information on it.
+
+## Going Beyond fmt.Printf() Style Debugging
+
+Adding these `fmt.Printf()` calls into your code can actually be pretty informative.
+It is kind of a shame that they have to be removed.
+
+But there is actually a way to leave (at least some of the more informative ones of) them in the code.
+
+One way is to use `fmt.Fprintf()` instead of `fmt.Printf()`.
+As in:
+
+```go
+var out io.Writer = ioutil.Discard
+if debugModeActivated {
+    out = os.Stdout
+}
+
+// ...
+
+fmt.Fprintf(out, "x = %v", x)
+```
+
+Note that `fmt.Fprintf()` has an additional 1st parameters that specifies where to send the output.
+
+In the case where `debugModeActivated` is `false` then all output from `fmt.Fprintf()` is discarded (and you will never see it).
+
+However, in the case where `debugModeActivated` is `true` then all output will go to `os.Stdout` which will make it work like `fmt.Printf()`.
+
+So, in that code example, the variable `debugModeActivated` lets us turn on and turn off the outputting of debug messages (by setting the value of the `debugModeActivated` variable to true or `false` respectively).
+This is the "magic" that allows us to _leave these "prints" in the code_.
+
+Note that this is a powerful technique, in that you could even make out send the data to a file.
+As in:
+
+```go
+var out io.Writer = ioutil.Discard
+switch logMode {
+    case "file":
+        out, err = os.Create("/path/to/logFile.log")
+        if nil != err {
+            panic(err.Error())
+        }
+    case "screen":
+        out = os.Stdout
+
+    default:
+        out = ioutil.Discard
+}
+
+// ...
+
+fmt.Fprintf(out, "x = %v", x)
+```
+
+(In the code here, the `logMode` variable is _stringly typed_.
+Here it is done for clarity.
+In your actual code it would be better to use const values.)
