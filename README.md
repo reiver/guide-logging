@@ -35,22 +35,23 @@ Let's get started!
 
 ## Table of Contents
 
-1. [Simple Logger](chapters/simple_logger/README.md)
-2. [Formatted Logger](chapters/formatted_logger/README.md)
-3. [Repository "go-log"](chapters/repository_go-log/README.md)
-4. [Pacakge "log"](chapters/package_log/README.md)
-5. [Unit Tests](chapters/unit_tests/README.md)
-6. import "go-log"
-7. Verbose
-8. Prefix
-9. Begin Prefix
-10. Func Name
-11. Timer
-12. Tracing
-13. Leveled Logger
-14. Leveled Logger Unit Tests
-15. Leveled Logger Demonstration
-16. Logger Verbosity
-17. License
-18. README.md
-19. Documentation
+1. [Why](chapters/why/README.md)
+2. [Simple Logger](chapters/simple_logger/README.md)
+3. [Formatted Logger](chapters/formatted_logger/README.md)
+4. [Repository "go-log"](chapters/repository_go-log/README.md)
+5. [Pacakge "log"](chapters/package_log/README.md)
+6. [Unit Tests](chapters/unit_tests/README.md)
+7. import "go-log"
+8. Verbose
+9. Prefix
+10. Begin Prefix
+11. Func Name
+12. Timer
+13. Tracing
+14. Leveled Logger
+15. Leveled Logger Unit Tests
+16. Leveled Logger Demonstration
+17. Logger Verbosity
+18. License
+19. README.md
+20. Documentation
