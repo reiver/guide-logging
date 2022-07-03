@@ -35,7 +35,7 @@ Let's get started!
 
 ## Table of Contents
 
-1. [Why](chapters/why/README.md)
+1. [Why Log](chapters/why_log/README.md)
 2. [Simple Logger](chapters/simple_logger/README.md)
 3. [Formatted Logger](chapters/formatted_logger/README.md)
 4. [Repository "go-log"](chapters/repository_go-log/README.md)
