@@ -39,7 +39,7 @@ Let's get started!
 2. [Formatted Logger](chapters/formatted_logger/README.md)
 3. [Repository "go-log"](chapters/repository_go-log/README.md)
 4. [Pacakge "log"](chapters/package_log/README.md)
-5. Unit Tests
+5. [Unit Tests](chapters/unit_tests/README.md)
 6. import "go-log"
 7. Verbose
 8. Prefix
