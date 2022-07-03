@@ -20,7 +20,7 @@ Or also for example:
 log.Errorf("problem creating new item in database: ", err)
 ```
 
-Also, **loogers** are often used for **debugging**.
+Also, **loggers** are often used for **debugging**.
 
 Typically the programmer is the one who is reading the **logs**, not the end user.
 I.e., the **logs** are there to help **you** (the programmer)!
