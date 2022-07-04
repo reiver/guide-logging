@@ -4,30 +4,47 @@ by [Charles Iliya Krempeaux](http://changelog.ca/)
 
 ---
 
-This is a **guide** on **logging**. And in particular how to create a **logger**.
+This is a **guide** on **logging**.
+And in particular, on how to create a **logger**.
 
-## Preface
+## Why
+
+Probably the most common use for **logging** is **debugging**.
+
+**Logs** can help you debug your code while you are doing your software development work.
+
+Also, if there is a problem on (the) production (deployment environment), then **logs** can also help you figure out what went wrong (on production).
+
+In these usages of **logs**, a programmer is the one who is reading the **logs**.
+I.e., the **logs** are there to help **you** (the programmer)!
+
+## What
 
 **Loggers** let programmers record information about events that happen when the program is running.
 
-So, for example:
+In the code **logging** looks something like this:
 ```go
 log.Alert("The super-user just logged in!")
 ```
 
-Or also for example:
+And this:
 ```go
-log.Errorf("problem creating new item in database: ", err)
+log.Error("problem creating new item in database: ", err)
 ```
 
-Also, **loggers** are often used for **debugging**.
+## Another Why
 
-Typically the programmer is the one who is reading the **logs**, not the end user.
-I.e., the **logs** are there to help **you** (the programmer)!
+**Logs** are also used by machines to detect "hacking" attempts
 
-**Logs** can help you debug your code while you are doing your software development work, and, if there is a problem on production, **logs** can also help you figure out what went wrong on production.
+And **logs** are used for graphing the number of run-time errors on (the) production (deployment environment),
 
-(**Logs** can also be read by software programs for monitoring, to detect hack attempts, to detect imminent hardware failure, etc.)
+Also **logs** are used to try to detect imminent hardware failure.
+
+Etc.
+
+In these cases, the **Logs** care read by software (rather than a programmer).
+
+## Getting Started
 
 At first your **logger** will be simple. But we will keep adding to it until it is powerful & sophisticated.
 
