@@ -56,7 +56,7 @@ Let's get started!
 2. [Simple Logger](chapters/simple_logger/README.md)
 3. [Formatted Logger](chapters/formatted_logger/README.md)
 4. [Repository "go-log"](chapters/repository_go-log/README.md)
-5. [Pacakge "log"](chapters/package_log/README.md)
+5. [Package "log"](chapters/package_log/README.md)
 6. [Unit Tests](chapters/unit_tests/README.md)
 7. import "go-log"
 8. Verbose
